@@ -3,7 +3,6 @@ import numpy
 import pyautogui
 import datetime
 import time
-from pynput import keyboard
 
 four = cv2.VideoWriter_fourcc(*'XVID')
 screen_size = (2048,1152)
@@ -15,7 +14,7 @@ while True:
     frame = numpy.array(img)
     frame = cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
     out.write(frame)
-    if cv2.waitKey(1) and 0xFF==keyboard.Key.f4:
+    if cv2.waitKey(1) and 0xFF=='q':
         break
 
 
